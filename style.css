@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: #f7f9fa;
+}
+
+/* 1. Container dạng lưới với Flexbox */
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;       /* Cho phép các phần tử tự động xuống dòng khi thiếu chỗ */
+  gap: 20px;             /* Khoảng cách giữa các thẻ sản phẩm */
+  padding: 20px;
+}
+
+/* 2. Thẻ sản phẩm */
+.product-card {
+  flex: 1 1 calc(25% - 20px); /* Tự co giãn, kích thước cơ sở khoảng 1/4 hàng */
+  min-width: 220px;           /* Chiều rộng tối thiểu để kích hoạt xuống dòng trên màn hình hẹp */
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+/* Hiệu ứng khi rê chuột qua thẻ */
+.product-card:hover {
+  transform: translateY(-4px);
+}
+
+.product-card h4 {
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.product-card .price {
+  color: #e53e3e;
+  font-weight: bold;
+}
